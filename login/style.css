@@ -115,6 +115,8 @@ input[type=text]:focus, input[type=password]:focus {
 
   .main-container {
     min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
   }
 
   .main-container h1 {
@@ -123,7 +125,10 @@ input[type=text]:focus, input[type=password]:focus {
 
   .login-container {
     width: 90%;
-    position: relative;
     bottom: 50px;
+  }
+
+  .itb-container {
+    position: static;
   }
 }
