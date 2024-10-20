@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../favico.svg" type="image/x-icon">
+    <title>Mathiverse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-bar-hidden" id="left-bar">
+            <div class="title-bar-container">
+                <h1>Mathiverse</h1>
+                <button id="menu-close-button">X</button>
+            </div>
+            <a href="../home/">Home</a>
+            <a class="active" href="">Assignments</a>
+            <div class="calendar-container">
+                <div class="calendar">
+                    <div class="header">
+                        <button id="prev-month">❮</button>
+                        <span id="month-year"></span>
+                        <button id="next-month">❯</button>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days" id="calendar-days"></div>
+                </div>
+            
+                <div class="events-section">
+                    <h2>Upcoming Events</h2>
+                    <ul id="events-list"></ul>
+                </div>
+            </div>
+            <div class="profile-container">
+                <img src="../images/profile.svg" alt="">
+                <div class="profile-details">
+                    <p><b>Daffa Ramadhan Elengi</b></p>
+                    <p>18222009@std.stei.itb.ac.id</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-details">
+                <div class="title-assignment-container">
+                    <h1>Assignments</h1>
+                    <button id="menu-button">☰</button>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="course">Module 1</span>
+                            <span class="status unanswered">Unanswered</span>
+                        </div>
+                        <div class="card-body">
+                            <h2>Limits</h2>
+                            <div class="assignment-detail">
+                                <p>Start: <strong>17/10/24 09:06</strong></p>
+                                <p>End: <strong>22/10/24 09:00</strong></p>
+                                <p>Type: <strong>TASK</strong></p>
+                                <p>Score: <strong>PERSONAL</strong></p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="./1" class="view-assignment">View Assignment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="itb-container">
+                    <img src="../images/itb-logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

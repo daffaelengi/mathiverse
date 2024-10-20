@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../favico.svg" type="image/x-icon">
+    <title>Mathiverse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div id="left-bar" class="left-bar-hidden">
+            <div class="title-bar-container">
+                <h1>Mathiverse</h1>
+                <button id="menu-close-button">X</button>
+            </div>
+            <a href="../../home/">Home</a>
+            <a href="../../assignments/">Assignments</a>
+            <div class="calendar-container">
+                <div class="calendar">
+                    <div class="header">
+                        <button id="prev-month">❮</button>
+                        <span id="month-year"></span>
+                        <button id="next-month">❯</button>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days" id="calendar-days"></div>
+                </div>
+            
+                <div class="events-section">
+                    <h2>Upcoming Events</h2>
+                    <ul id="events-list"></ul>
+                </div>
+            </div>
+            <div class="profile-container">
+                <img src="../../images/profile.svg" alt="">
+                <div class="profile-details">
+                    <p><b>Daffa Ramadhan Elengi</b></p>
+                    <p>18222009@std.stei.itb.ac.id</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-details">
+                <div class="module-page">
+                    <div class="page-layout">
+                        <div class="button-container">
+                            <a class="back-button" href="../../home">Back</a>
+                            <button id="menu-button">☰</button>
+                        </div>
+                        <h2>Module 1</h2>
+                        <p class="module-title">Limits</p>
+                        <br>
+                        <p></p><em>"Calculus is the study of limits."</em></p>
+                        <br>
+                        <h2>Problem Leading to the Limit Concept</h2>
+                        <p>The concept of <b>limit</b> is central to many problems in the physical, engineering, and social sciences. Basically the question is this:</p>
+                        <br>
+                        <p>What happens to the function \(f(x)\) as \(x\) gets close to some constant \(c\)?</p>
+                        <br>
+                        <p>Suppose that as an object steadily moves forward we know its position at any given time. We denote the position at time \(t\) by \(s(t)\). We can use the formula "distance equals rate times time" to find the speed over any interval of time like this.</p>
+                        <br>
+                        <p>\(speed=\frac{distance}{time}\)</p>
+                        <br>
+                        <p>We call this the "average" speed over the interval, since no matter how small the interval is, we never know whether the speed is constant over this interval. Unless stated otherwise.</p>
+                        <br>
+                        <p>Based on that, we can find the average speed of an object over the time interval \([a,b]\) using this formula:</p>
+                        <br>
+                        <p>\(speed=\frac{s(b)-s(a)}{b-a}\)</p>
+                        <br>
+                        <p>Let's try using that formula to find average speed over the time interval [1, 2] with \(s(t)=t^2\).</p>
+                        <br>
+                        <form class="try-1" id="try-1">
+                            <div>\(a=\)<input type="number" id="start" name="start" step="any" required> \(b=\)<input type="number" id="end" name="end" step="any" required></div><button type="submit" class="button">Calculate</button>
+                        </form>
+                        <br>
+                        <div class="result-1">
+                            <p>\(speed=\frac{s(b)-s(a)}{b-a}=\)</p>
+                            <p id="result-1">?</p>
+                        </div>
+                        <br>
+                        <p><b>Then, how do we know how fast is the object traveling at one point of time?</b></p>
+                        <br>
+                        <p>To give meaning to this "instantaneous" velocity we must talk about the <i>limit</i> of the average speed over smaller and smaller intervals.</p>
+                        <p>We couldn't just put the time interval over \([a,b]\) where \(b\) is equal to \(a\) on the same formula to find the speed at point \(a\), as it leads to division by zero. However, we can approximate the answer by choosing \(b\) with difference to \(a\) nearing zero (the closer \(b\) is to \(a\) the more accurate).</p>
+                        <br>
+                        <p>Let \(a\)=5 and \(s(t)=t^2\):</p>
+                        <br>
+                        <p>Choosing \(b\) where \(b\lt a\):</p>
+                        <form class="try-1" id="try-1">
+                            <input type="range" id="b-a" min="4000" max="4999" step="1" value="4000">
+                            <p>\(b=\)<span id="change-2-1">4</span></p>
+                        </form>
+                        <div class="result-1">
+                            <p>\(speed=\frac{s(b)-s(a)}{b-a}=\)</p>
+                            <p id="result-2-1">?</p>
+                        </div>
+                        <br>
+                        <p>Choosing \(b\) where \(b\gt a\):</p>
+                        <form class="try-1" id="try-1">
+                            <input type="range" id="a-b" min="5001" max="6000" step="1" value="6000">
+                            <p>\(b=\)<span id="change-2-2">6</span></p>
+                        </form>
+                        <div class="result-1">
+                            <p>\(speed=\frac{s(b)-s(a)}{b-a}=\)</p>
+                            <p id="result-2-2">?</p>
+                        </div>
+                        <br>
+                        <p>While it still is an approximation, we intuitively can tell that the average speed approaching a number as \(b\) getting closer to \(a\), in this case it's approaching number 10.</p>
+                        <br>
+                        <p>The same concept also applied when approximating an area of a shape with curved boundaries such as a circle. Archimedes had this idea over two thousand years ago.</p>
+                        <br>
+                        <p>Imagine regular polygons inscribed in a circle as shown below.</p>
+                        <br>
+                        <div class="container">
+                            <canvas id="polygonCanvas" width="500" height="500"></canvas>
+                            <div id="sliderContainer">
+                                <p for="sidesSlider">Number of sides (n): </p>
+                                <input type="range" id="sidesSlider" min="3" max="100" value="0">
+                                <span id="nValue">3</span>
+                            </div>
+                        </div>
+                        <br>
+                        <p>Archimedes was able to find the area of a regular polygon with \(n\) sides, and by taking the regular polygon with more and more sides, he was able to approximate the area of a circle to any desired level of accuracy. In other words, the area of the circle is the <i>limit</i> of the areas of the inscribed polygons as \(n\) increases without bound.</p>
+                        <br>
+                        <p>Another one, consider the graph of the function \(y = f(x)\) for \(a \le x \le b\). If the graph is a straight line, the length of the curve is easy to fing using the distance formula.</p>
+                        <br>
+                        <p><b>But, what if the graph is curved?</b></p>
+                        <br>
+                        <p>Then, we can try to find numerous points along the curve and connect them with line segments as shown below.</p>
+                        <br>
+                        <div class="container">
+                            <canvas id="curveCanvas" width="600" height="400"></canvas>
+                            <div id="sliderContainer">
+                                <p for="pointsSlider">Number of Segments: </p>
+                                <input type="range" id="pointsSlider" min="2" max="50" value="2">
+                                <span id="pointsValue">2</span>
+                            </div>
+                            <!-- <p>Total Length Approximation: <span id="lengthValue">0</span></p> -->
+                        </div>
+                        <br>
+                        <p>If we add up the lengths of these line segments we should get a sum that is approximately the length of the curve. In fact, by "length of the curve" we mean the <i>limit</i> of the sum of the lengths of these line segments as the number of line segments increases without bond.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="itb-container">
+                    <img src="../../images/itb-logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./speed-formula.js"></script>
+    <script src="./instantaneous-speed.js"></script>
+    <script src="./inscribed-polygon.js"></script>
+    <script src="./curved-function.js"></script>
+</body>
+</html>

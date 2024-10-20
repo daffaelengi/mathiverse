@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../favico.svg" type="image/x-icon">
+    <title>Mathiverse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div id="left-bar" class="left-bar-hidden">
+            <div class="title-bar-container">
+                <h1>Mathiverse</h1>
+                <button id="menu-close-button">X</button>
+            </div>
+            <a href="../../home/">Home</a>
+            <a class="active" href="">Assignments</a>
+            <div class="calendar-container">
+                <div class="calendar">
+                    <div class="header">
+                        <button id="prev-month">❮</button>
+                        <span id="month-year"></span>
+                        <button id="next-month">❯</button>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days" id="calendar-days"></div>
+                </div>
+            
+                <div class="events-section">
+                    <h2>Upcoming Events</h2>
+                    <ul id="events-list"></ul>
+                </div>
+            </div>
+            <div class="profile-container">
+                <img src="../../images/profile.svg" alt="">
+                <div class="profile-details">
+                    <p><b>Daffa Ramadhan Elengi</b></p>
+                    <p>18222009@std.stei.itb.ac.id</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-details">
+                <div id="quiz-container">
+                    <div class="button-container">
+                        <a class="back-button" href="../">Back</a>
+                        <button id="menu-button">☰</button>
+                    </div>
+                    <h1>Module 1 Quiz: Limits</h1>
+                    <form id="quiz-form">
+                        <div class="question">
+                            <p>1. What is the derivative of \(x^2\)?</p>
+                            <label class="option">
+                                <input type="radio" name="question1" value="a">
+                                <span class="custom-radio"></span>
+                                <span>a) \(2x\)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="question1" value="b">
+                                <span class="custom-radio"></span>
+                                <span>b) \(x^2\)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="question1" value="c">
+                                <span class="custom-radio"></span>
+                                <span>c) \(x\)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="question1" value="d">
+                                <span class="custom-radio"></span>
+                                <span>d) \(3x^2\)</span>
+                            </label>
+                        </div>
+            
+                        <div class="question">
+                            <p>2. What is the integral of \(\frac{1}{x} \, dx\)?</p>
+                            <label class="option">
+                                <input type="radio" name="question2" value="a">
+                                <span class="custom-radio"></span>
+                                <span>a) \(\ln|x| + C\)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="question2" value="b">
+                                <span class="custom-radio"></span>
+                                <span>b) \(x + C\)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="question2" value="c">
+                                <span class="custom-radio"></span>
+                                <span>c) \(\frac{1}{x} + C\)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="question2" value="d">
+                                <span class="custom-radio"></span>
+                                <span>d) \(\frac{x^2}{2} + C\)</span>
+                            </label>
+                        </div>
+            
+                        <div class="question">
+                            <p>3. What does the Fundamental Theorem of Calculus relate?</p>
+                            <label class="option">
+                                <input type="radio" name="question3" value="a">
+                                <span class="custom-radio"></span>
+                                <span>a) Derivatives and limits</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="question3" value="b">
+                                <span class="custom-radio"></span>
+                                <span>b) Integrals and derivatives</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="question3" value="c">
+                                <span class="custom-radio"></span>
+                                <span>c) Functions and sequences</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="question3" value="d">
+                                <span class="custom-radio"></span>
+                                <span>d) Slope and area</span>
+                            </label>
+                        </div>
+            
+                        <button type="button" id="check-answers">Check Answers</button>
+                    </form>
+            
+                    <div id="result"><i>Click 'Check Answer' to see your score.</i></div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="itb-container">
+                    <img src="../../images/itb-logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
