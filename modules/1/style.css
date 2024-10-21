@@ -316,6 +316,8 @@ input[type="number"]:focus {
     /* border: 1px solid black; */
   }
 
+
+
   .profile-container {
     position: fixed;
     bottom: 0;
@@ -410,5 +412,21 @@ input[type="number"]:focus {
 
   #curveCanvas {
     width: 300px;
+  }
+
+  #sliderContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #sliderContainer span {
+    align-self: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
