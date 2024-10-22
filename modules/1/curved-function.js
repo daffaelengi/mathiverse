@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Draw the axes
         ctx.beginPath();
+        ctx.lineWidth = 2;
         ctx.moveTo(50, height - 50);
         ctx.lineTo(width - 50, height - 50);
         ctx.moveTo(50, 0);

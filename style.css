@@ -1,15 +1,23 @@
-
 * {
-    /* border: 1px solid black; */
-    font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
+  /* border: 1px solid black; */
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p, b, i {
+  font-size: 1.6rem;
 }
 
 .main-container {
-    display: flex;
-    min-height: 95vh;
-    justify-content: center;
-    background-image: url('bg-pattern.svg');
+  position: relative;
+  display: flex;
+  min-height: 890px;
+  height: 100vh;
+  justify-content: center;
+  background-image: url('bg-pattern.svg');
 }
 
 .title-container {
@@ -17,22 +25,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 33%;
 }
 
 .main-container h1, p {
-    margin: 0;
     text-align: center;
 }
 
 .main-container h1 {
     text-align: center;
     font-family: Italiana;
-    font-size: 200px;
+    font-size: 20rem;
     font-weight: 400;
     line-height: 90%;
 }
 
+/* START - Button */
 .button-container {
     margin-top: 5%;
     display: flex;
@@ -46,7 +53,7 @@
   border: 2px solid black;
   color: white;
   text-align: center;
-  font-size: 28px;
+  font-size: 1.75rem;
   padding: 20px;
   width: 200px;
   transition: 0.5s;
@@ -60,6 +67,7 @@
 }
 
 .button span {
+  font-size: 1.75rem;
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -83,13 +91,16 @@
   opacity: 1;
   right: 0;
 }
+/* END - Button */
 
+/* START - ITB Footer */
 .itb-container {
-  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+  position: absolute;
   bottom: 0;
   padding: 20px;
-  z-index: 1; /* Stay on top */
-  width: 300px;
+  z-index: 1;
+  width: 80%;
+  max-width: 300px;
 }
 
 .itb-container img {
@@ -97,33 +108,24 @@
   width: 100%;
   height: 100%;
 }
+/* END - ITB Footer */
 
-@media (max-width: 480px) {
-  * {
-    /* border: 1px solid black; */
-    padding: 0;
-    margin: 0;
-  }
-
-  .main-container {
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
-  }
-
+/* START Media Query */
+@media (max-width: 1024px) {
   .main-container h1 {
-    font-size: 75px;
-  }
-
-  .title-container {
-    width: 100%;
-  }
-
-  .button {
-    font-size: 16px;
-  }
-
-  .itb-container {
-    position: static;
+    font-size: 12rem;
   }
 }
+
+@media (max-width: 768px) {
+  .main-container h1 {
+    font-size: 9rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-container h1 {
+    font-size: 7rem;
+  }
+}
+/* END Media Query */
